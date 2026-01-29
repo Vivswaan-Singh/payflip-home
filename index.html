@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PayFlip – Simple Crypto Payments</title>
+
+  <style>
+    :root {
+      --primary: rgb(212, 243, 77);
+      --secondary: rgb(111, 69, 233);
+      --bg: #0e0e11;
+      --text: #f5f5f7;
+      --muted: #a1a1aa;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(
+        1200px 600px at 20% -10%,
+        rgba(111, 69, 233, 0.25),
+        transparent
+      ),
+      var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+
+    header {
+      margin-bottom: 4rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(212, 243, 77, 0.15);
+      color: var(--primary);
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      line-height: 1.1;
+      margin-bottom: 1.2rem;
+    }
+
+    h1 span {
+      color: var(--primary);
+    }
+
+    p.lead {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 700px;
+    }
+
+    section {
+      margin-top: 4rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    p {
+      max-width: 750px;
+      color: var(--text);
+    }
+
+    .card {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      border-radius: 12px;
+      background: linear-gradient(
+        180deg,
+        rgba(255,255,255,0.04),
+        rgba(255,255,255,0.01)
+      );
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    footer {
+      margin-top: 5rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer a {
+      color: var(--secondary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .contact {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="badge">google sign-in enabled</div>
+      <h1>
+        Pay<span>Flip</span>
+      </h1>
+      <p class="lead">
+        PayFlip is a mobile application that allows users to authenticate with
+        Google and send crypto payments across supported blockchains.
+      </p>
+    </header>
+
+    <section>
+      <h2>What we use Google Sign-In for</h2>
+      <div class="card">
+        <p>
+          PayFlip uses Google Sign-In only to authenticate users.
+          We access basic profile information such as name, email address
+          and profile picture.
+        </p>
+        <p style="margin-top: 0.8rem;">
+          We do <strong>not</strong> read emails, access contacts
+          or use any other Google services.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Platform</h2>
+      <div class="card">
+        <p>
+          PayFlip is an Android application backed by a secure Rust-based API.
+          All blockchain transactions are executed on-chain using
+          user-controlled wallets.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="contact">
+        Contact: payflipperbackend@gmail.com
+      </div>
+      <div>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
